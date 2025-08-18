@@ -7,5 +7,11 @@ interface ContactButtonProps {
 }
 
 export default function ContactButton({}: ContactButtonProps) {
-  return <button className={styles.container}>ContactButton</button>;
+  return (
+    <div className={styles.container}>
+      <button className={styles.button}>
+        Contact Me Before Times Runs Out
+      </button>
+    </div>
+  );
 }
