@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Hero from "@/components/Hero/Hero";
 import Countdown from "@/components/Countdown/Countdown";
 import ContactButton from "@/components/ContactButton/ContactButton";
+import Introduction from "@/components/Introduction/Introduction";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Countdown />
       <ContactButton />
+      <Introduction />
     </main>
   );
 }
