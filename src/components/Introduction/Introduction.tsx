@@ -85,7 +85,6 @@ export default function Introduction({}: IntroductionProps) {
           <p className={styles.text}>Motivé pour une alternance</p>
         </div>
       </div>
-      <p>Le temps passe, construisons ensemble l'avenir.</p>
     </div>
   );
 }

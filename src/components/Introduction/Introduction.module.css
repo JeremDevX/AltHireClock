@@ -10,7 +10,7 @@
   text-align: left;
   line-height: 1.5;
   gap: 0.5rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .innerContainer {
@@ -90,6 +90,7 @@
     width: 3rem;
     height: 3rem;
     color: var(--light-red);
+    filter: drop-shadow(0 0 0.1rem var(--red));
   }
 }
 

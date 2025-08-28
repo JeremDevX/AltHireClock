@@ -19,6 +19,7 @@
 
 .button:hover {
   transform: scale(1.02);
+  box-shadow: 0px 0px 8px var(--red);
 }
 
 .button:active {

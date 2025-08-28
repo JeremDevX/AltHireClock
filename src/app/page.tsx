@@ -5,6 +5,7 @@ import Countdown from "@/components/Countdown/Countdown";
 import ContactButton from "@/components/ContactButton/ContactButton";
 import Introduction from "@/components/Introduction/Introduction";
 import ProfileModal from "@/components/ProfileModal/ProfileModal";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ContactButton />
       <Introduction />
       <ProfileModal />
+      <Footer />
     </main>
   );
 }
