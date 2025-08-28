@@ -6,7 +6,7 @@
 }
 
 .button {
-  border: 1px solid var(--red);
+  border: 1px solid #f5000063;
   background: var(--red-bg);
   color: var(--foreground);
   padding: 0.75rem 5rem;

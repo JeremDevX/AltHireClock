@@ -10,7 +10,7 @@ export default function ContactButton({}: ContactButtonProps) {
   return (
     <div className={styles.container}>
       <button className={styles.button}>
-        Contact Me Before Times Runs Out
+        Votre futur alternant dès septembre !
       </button>
     </div>
   );

@@ -18,6 +18,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  gap: 2rem;
 }
 
 .avatar {
@@ -31,7 +32,7 @@
 }
 
 .highlights {
-  width: 67%;
+  width: 100%;
 }
 
 .list {
@@ -42,30 +43,53 @@
   align-items: start;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
 }
 
 .list li {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(-135deg, #0b0b0b 0%, rgb(45, 0, 0) 100%);
+  border: 1px solid #3a000099;
+  font-weight: 600;
+  width: 100%;
+  transition: box-shadow 140ms ease, transform 140ms ease;
+}
 
-  svg {
-    width: 1.5rem;
-    height: 1.5rem;
-    color: var(--light-red);
-    margin: 0.25rem;
-  }
+.list li svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--light-red);
+  margin: 0.25rem;
 }
 
 .image {
-  width: 9rem;
-  height: 9rem;
+  width: 12rem;
+  height: 12rem;
   border-radius: 50%;
-  background: var(--light-red);
+  box-shadow: 0 4px 12px rgba(82, 2, 2, 0.5);
+  position: relative;
+
+  img {
+    object-fit: cover;
+    border-radius: 50%;
+    object-position: 0 calc(0% - 13px);
+  }
 }
 
 .textContainer {
   width: 67%;
+}
+
+.textContainer h2 {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid #5b5b5b4e;
+  width: fit-content;
 }
 
 .description strong {
@@ -82,9 +106,10 @@
   margin-bottom: 1rem;
   padding: 1rem;
 
-  border: 1px solid var(--red);
+  border: 1px solid #3a000099;
   border-radius: 0.75rem;
-  box-shadow: 0px 0px 4px var(--red);
+  box-shadow: 0px 0px 1px var(--red);
+  background: linear-gradient(135deg, #0b0b0b 0%, rgb(45, 0, 0) 100%);
 
   svg {
     width: 3rem;
