@@ -42,7 +42,6 @@ export default function ContactButton({}: ContactButtonProps) {
     }
   }
 
-  // Close on Escape
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
       if (e.key === "Escape") setToggleForm(false);
@@ -56,6 +55,15 @@ export default function ContactButton({}: ContactButtonProps) {
       setTimeout(() => {
         firstInputRef.current?.focus();
       }, 0);
+    }
+  }, [toggleForm]);
+
+  useEffect(() => {
+    if (!toggleForm) {
+      setNameFilled(false);
+      setEmailFilled(false);
+      setMessageFilled(false);
+      setCaptchaSolved(false);
     }
   }, [toggleForm]);
 
