@@ -29,14 +29,18 @@ export default function ProfileModal({}: ProfileModalProps) {
             <div className={styles.itemDesc}>
               <ul className={styles.itemBullets}>
                 <li>
-                  Front End : HTML, CSS / SCSS, Javascript / Typescript,
-                  Tailwind, React, Redux, Next.js
+                  Front End : React, Next.js, TypeScript, JavaScript, Tailwind,
+                  Redux, HTML, CSS/SCSS, Zod
                 </li>
-                <li>Back End : Node.js, Prisma</li>
-                <li>Gestion de contenu : Sanity, Strapi</li>
+                <li>Back End : Node.js, Prisma, SQL</li>
+                <li>CMS / Headless : Sanity, Strapi</li>
                 <li>
-                  Environnement : VSCode, Git, GitHub, Vercel, Figma, Photoshop
-                  (bases), Illustrator (bases)
+                  Méthodologies : Accessibilité (WCAG), SEO, Responsive design,
+                  APIs REST/GraphQL
+                </li>
+                <li>
+                  Outils : Git/GitHub, VSCode, Vercel, Figma,
+                  Photoshop/Illustrator (bases)
                 </li>
               </ul>
             </div>
@@ -48,10 +52,10 @@ export default function ProfileModal({}: ProfileModalProps) {
             </div>
             <div className={styles.itemDesc}>
               <ul className={styles.itemBullets}>
-                <li>Autonomie</li>
-                <li>Travail d’équipe</li>
-                <li>Adaptabilité</li>
-                <li>Résolution de problème</li>
+                <li>Leadership & travail d’équipe</li>
+                <li>Autonomie et rigueur</li>
+                <li>Résolution de problèmes complexes</li>
+                <li>Adaptabilité et montée en compétence rapide</li>
               </ul>
             </div>
           </div>
@@ -63,7 +67,6 @@ export default function ProfileModal({}: ProfileModalProps) {
               <ul className={styles.itemBullets}>
                 <li>Français (Natif)</li>
                 <li>Anglais (B2-C1)</li>
-                <li>Allemand (Basique)</li>
               </ul>
             </div>
           </div>
@@ -88,79 +91,77 @@ export default function ProfileModal({}: ProfileModalProps) {
         <div className={styles.sectionList}>
           <div className={styles.sectionItem}>
             <div className={styles.itemHeader}>
+              <strong className={styles.itemTitle}>Développeur web</strong>
+              <span className={styles.itemDates}>2023 - 2025</span>
+            </div>
+            <div className={styles.itemDesc}>
+              <div className={styles.itemSub}>
+                Projets académiques & prototypes
+              </div>
+              <ul className={styles.itemBullets}>
+                <li>
+                  Conception et déploiement d’applications web modernes
+                  (React/Next.js, TypeScript, Tailwind)
+                </li>
+                <li>
+                  Réalisations : Portfolio dynamique (API GitHub + Framer
+                  Motion), CV interactif “AltHireClock”, mini-apps (Pomodoro
+                  Timer, Password Generator, GitHub Search, BMI Calculator),
+                  blog technique (Next.js + Sanity), jeux web (React & JS
+                  Vanilla)
+                </li>
+                <li>
+                  Mise en œuvre de bonnes pratiques : accessibilité, SEO
+                  (Lighthouse/Wave), responsive design, CI/CD
+                </li>
+                <li>
+                  Premiers pas back-end : Node.js, Prisma, SQL, APIs
+                  REST/GraphQL
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className={styles.sectionItem}>
+            <div className={styles.itemHeader}>
               <strong className={styles.itemTitle}>XRVAP</strong>
-              <span className={styles.itemDates}>Avr 2025 - Juil 2025</span>
+              <span className={styles.itemDates}>2025</span>
             </div>
             <div className={styles.itemDesc}>
               <div className={styles.itemSub}>Commercial itinérant</div>
               <ul className={styles.itemBullets}>
+                <li>Vente B2C d’équipements techniques</li>
                 <li>
-                  Vente d’appareil de nettoyage pour le particulier à domicile
-                </li>
-                <li>Démonstration et explications techniques de l’appareil</li>
-                <li>Montage de dossiers de financement</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className={styles.sectionItem}>
-            <div className={styles.itemHeader}>
-              <strong className={styles.itemTitle}>Projets personnel</strong>
-              <span className={styles.itemDates}>Sep 2024 - Avr 2025</span>
-            </div>
-            <div className={styles.itemDesc}>
-              <div className={styles.itemSub}>Développement de compétences</div>
-              <ul className={styles.itemBullets}>
-                <li>
-                  Apprentissage continu et perfectionnement des technologies
-                  front-end (Framework, Préprocesseurs CSS, Headless CMS, etc.)
-                </li>
-                <li>
-                  Mise en oeuvre des bonnes pratiques d’accessibilité,
-                  responsive design, SEO et optimisation (WCAG, Lighthouse,
-                  Wave, Speed Insights)
-                </li>
-                <li>Exploration CSR / SSR / ISR</li>
-                <li>
-                  Veille technologique et formations (serverless, API
-                  Rest/GraphQL)
-                </li>
-                <li>
-                  Réalisation d’un site web combinant blog et outils interactifs
-                  (Next.js + Sanity)
+                  Démonstrations, pédagogie client, montage dossiers de
+                  financement
                 </li>
               </ul>
             </div>
           </div>
-
           <div className={styles.sectionItem}>
             <div className={styles.itemHeader}>
-              <strong className={styles.itemTitle}>MONT BLANC AUTOS</strong>
-              <span className={styles.itemDates}>Nov 2014 - Sep 2023</span>
+              <strong className={styles.itemTitle}>Mont Blanc Autos</strong>
+              <span className={styles.itemDates}>2014 - 2023</span>
             </div>
             <div className={styles.itemDesc}>
-              <div className={styles.itemSub}>Technicien / Chef d’équipe</div>
+              <div className={styles.itemSub}>
+                Technicien puis Chef d’équipe
+              </div>
               <ul className={styles.itemBullets}>
                 <li>
-                  Chef d’équipe et technicien principal chez Mazda et Mitsubishi
+                  Supervision d’une équipe de 3 techniciens (Mazda & Mitsubishi)
                 </li>
                 <li>
-                  Expertise en diagnostic et habilitation de travail sur
-                  véhicules hybrides et électriques (hors et sous tension)
+                  Référent diagnostics complexes (thermique, hybride,
+                  électrique)
                 </li>
                 <li>
-                  Gestion clientèle complète (prise de RDV, réception, devis,
-                  facturation, restitution)
+                  Gestion complète de la relation client et des garanties
+                  constructeur
                 </li>
                 <li>
-                  Gestion des dossiers de garanties constructeurs et demandes
-                  d’accommodement
+                  Organisation planning, contrôle qualité, remplacement chef
+                  d’atelier
                 </li>
-                <li>
-                  Supervision de l’équipe, gestion du planning et contrôle
-                  qualité
-                </li>
-                <li>Remplacement du chef d’atelier en son absence</li>
               </ul>
             </div>
           </div>
@@ -176,23 +177,19 @@ export default function ProfileModal({}: ProfileModalProps) {
           <div className={styles.eduItem}>
             <div className={styles.eduHeader}>
               <strong className={styles.eduSchool}>
-                MYDIGITALSCHOOL Grenoble
+                MyDigitalSchool Grenoble
               </strong>
-              <span className={styles.eduDates}>2025 - 2026 (en cours)</span>
+              <span className={styles.eduDates}>2025 - 2027 (en cours)</span>
             </div>
-            <div className={styles.eduDegree}>
-              Titre Concepteur Développeur d'Applications
-            </div>
+            <div className={styles.eduDegree}>MBA Développeur Fullstack</div>
           </div>
 
           <div className={styles.eduItem}>
             <div className={styles.eduHeader}>
-              <strong className={styles.eduSchool}>OPENCLASSROOMS</strong>
-              <span className={styles.eduDates}>Déc 2023 - Sep 2024</span>
+              <strong className={styles.eduSchool}>OpenClassrooms</strong>
+              <span className={styles.eduDates}> 2023 - 2024</span>
             </div>
-            <div className={styles.eduDegree}>
-              Intégrateur Web (RNCP 5 équivalent BTS)
-            </div>
+            <div className={styles.eduDegree}>Intégrateur Web - Titre RNCP</div>
           </div>
 
           <div className={styles.eduItem}>

@@ -16,7 +16,7 @@ export default function TimeSquare({
   minutes,
   seconds,
 }: TimeSquareProps) {
-  const deadline = new Date("2025-09-22T00:00:00Z").getTime();
+  const deadline = new Date("2025-09-15T00:00:00Z").getTime();
   const getTimeLeft = () => {
     const now = new Date().getTime();
     const distance = deadline - now;

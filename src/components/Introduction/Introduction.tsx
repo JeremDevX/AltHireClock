@@ -45,7 +45,7 @@ export default function Introduction({}: IntroductionProps) {
                 tabIndex={0}
                 aria-label="En route vers le fullstack"
               >
-                <IoIosRocket /> En route vers le fullstack
+                <IoIosRocket /> En route vers le Fullstack
               </li>
             </ul>
           </div>
@@ -54,38 +54,29 @@ export default function Introduction({}: IntroductionProps) {
           <h2>Qui suis-je ?</h2>
           <p className={styles.description}>
             Je suis <strong>Jérémie Lavergnat</strong>, ancien chef d’équipe
-            automobile devenu passionné de <strong>développement web</strong>.
-            Pendant dix ans, j’ai appris à{" "}
-            <strong>gérer des responsabilités</strong>, à{" "}
-            <strong>travailler en équipe</strong> et à rester{" "}
-            <strong>rigoureux</strong> sous pression.
+            automobile avec 10 ans d’expérience en management, diagnostic
+            technique et relation client.
             <br />
             <br />
-            Aujourd’hui, j’ai choisi de mettre cette expérience au service d’un
-            nouveau défi: <strong>l’informatique</strong> et le{" "}
-            <strong>web</strong>.
+            Aujourd’hui, je mets cette rigueur et cette capacité à résoudre des
+            problèmes complexes au service d’un nouveau défi:{" "}
+            <strong>l’informatique</strong> et le <strong>web</strong>.
             <br />
             <br />
-            J’étudie actuellement à <strong>
-              MyDigitalSchool Grenoble
-            </strong>{" "}
-            pour valider mon
-            <strong> Bac+3 Concepteur Développeur d’Applications</strong>, avec
-            l’objectif clair de poursuivre jusqu’au
-            <strong> Bac+5 MBA Fullstack</strong>.
+            Sélectionné directement en{" "}
+            <strong>MBA Développeur Fullstack</strong> à MyDigitalSchool
+            Grenoble, je développe des compétences solides en{" "}
+            <strong>front-end</strong> (React/Next.js, TypeScript, Tailwind) et
+            en <strong>back-end</strong> (Node.js, Prisma, SQL, APIs
+            REST/GraphQL) pour devenir un développeur complet.
             <br />
             <br />
-            J’ai déjà une solide base en <strong>front-end</strong>, et je
-            développe de plus en plus mes compétences en
-            <strong> back-end</strong> afin de devenir un développeur{" "}
-            <strong>complet</strong>.
-            <br />
-            <br />
-            Pour moi, cette alternance n’est pas juste un passage : c’est une{" "}
-            <strong>étape clé</strong>. Je veux rejoindre une entreprise prête à
-            me faire confiance et lui apporter en retour : mon{" "}
-            <strong>énergie</strong>, ma <strong>motivation</strong> et ma
-            capacité à <strong>apprendre vite</strong>.
+            Cette alternance n’est pas seulement un passage obligatoire, mais
+            une <strong>étape clé</strong> de mon parcours. Je veux rejoindre
+            une entreprise qui me fera confiance, et à laquelle j’apporterai en
+            retour : mon <strong>énergie</strong>, ma{" "}
+            <strong>motivation</strong> et ma capacité à{" "}
+            <strong>apprendre vite</strong>.
           </p>
         </div>
       </div>
@@ -93,7 +84,7 @@ export default function Introduction({}: IntroductionProps) {
         <div className={styles.stat}>
           <TbTargetArrow />
           <h3 className={styles.strong}>1 but</h3>
-          <p className={styles.text}>Devenir fullstack</p>
+          <p className={styles.text}>Devenir Fullstack</p>
         </div>
         <div className={styles.stat}>
           <BsHourglass />
