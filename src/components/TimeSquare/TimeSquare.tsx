@@ -16,6 +16,12 @@ export default function TimeSquare({
   minutes,
   seconds,
 }: TimeSquareProps) {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const deadline = new Date("2025-09-15T00:00:00Z").getTime();
   const getTimeLeft = () => {
     const now = new Date().getTime();
@@ -50,7 +56,7 @@ export default function TimeSquare({
   return (
     <div className={styles.container}>
       <div className={styles.timeUnit}>
-        <p className={styles.timeValue}>{value}</p>
+        <p className={styles.timeValue}>{isClient ? value : "..."}</p>
       </div>
       <div className={styles.timeLabel}>
         <h3>
