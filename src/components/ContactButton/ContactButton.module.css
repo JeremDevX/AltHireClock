@@ -107,13 +107,13 @@
   font-weight: 600;
 }
 
-.submit:hover {
+.submit:not(:disabled):hover {
   transform: scale(1.02);
   background: var(--red);
   box-shadow: 0px 0px 8px var(--red);
 }
 
 .submit:disabled {
-  background: #171010;
+  background: #251919;
   cursor: not-allowed;
 }
