@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import styles from "./ContactButton.module.css";
+import Altcha from "./Altcha";
 
 interface ContactButtonProps {
   // Add props here if needed
@@ -9,11 +10,23 @@ interface ContactButtonProps {
 
 export default function ContactButton({}: ContactButtonProps) {
   const [toggleForm, setToggleForm] = useState(false);
+  const [nameFilled, setNameFilled] = useState(false);
+  const [emailFilled, setEmailFilled] = useState(false);
+  const [messageFilled, setMessageFilled] = useState(false);
+  const [captchaSolved, setCaptchaSolved] = useState(false);
   const firstInputRef = useRef<HTMLInputElement | null>(null);
   const modalRef = useRef<HTMLDivElement | null>(null);
+  const altchaRef = useRef<HTMLInputElement>(null);
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+
+    const captchaValue = altchaRef.current?.value;
+    if (!captchaValue) {
+      alert("Veuillez compléter le captcha");
+      return;
+    }
+
     const form = e.currentTarget;
     const formData = new FormData(form);
 
@@ -86,10 +99,39 @@ export default function ContactButton({}: ContactButtonProps) {
                 name="name"
                 placeholder="Nom et Prénom"
                 required
+                onChange={(e) => setNameFilled(!!e.target.value)}
               />
-              <input type="email" name="email" placeholder="Email" required />
-              <textarea name="message" placeholder="Message" required />
-              <button type="submit" className={styles.submit}>
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                onChange={(e) => setEmailFilled(!!e.target.value)}
+              />
+              <textarea
+                name="message"
+                placeholder="Message (max 2000 caractères)"
+                required
+                maxLength={2000}
+                onChange={(e) => setMessageFilled(!!e.target.value)}
+              />
+              <Altcha
+                ref={altchaRef}
+                onStateChange={(ev) => {
+                  const detail = (ev as CustomEvent).detail;
+                  setCaptchaSolved(detail.state === "verified");
+                }}
+              />
+              <button
+                type="submit"
+                className={styles.submit}
+                disabled={
+                  !captchaSolved ||
+                  !nameFilled ||
+                  !emailFilled ||
+                  !messageFilled
+                }
+              >
                 Envoyer
               </button>
             </form>
