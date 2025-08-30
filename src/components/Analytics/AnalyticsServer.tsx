@@ -10,9 +10,9 @@ async function getData() {
 
   const totalViews = await sql`SELECT total_views FROM stats WHERE id = 1`;
   const osNumbers =
-    await sql`SELECT os, COUNT(*)::int AS total FROM visitors GROUP BY os`;
+    await sql`SELECT os, COUNT(*)::int AS total FROM visitors WHERE os != 'Unknown' GROUP BY os`;
   const browserNumbers =
-    await sql`SELECT browser, COUNT(*)::int AS total FROM visitors GROUP BY browser`;
+    await sql`SELECT browser, COUNT(*)::int AS total FROM visitors WHERE browser != 'Unknown' GROUP BY browser`;
   const uniqueVisitor = await sql`SELECT COUNT(*)::int AS total FROM visitors;`;
 
   return {
