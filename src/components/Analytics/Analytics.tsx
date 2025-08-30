@@ -1,13 +1,8 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
-import styles from "./Analytics.module.scss";
+import { useEffect, useState } from "react";
 
-interface AnalyticsProps {
-  //Add props here
-}
-
-export default function Analytics({}: AnalyticsProps) {
+export default function Analytics() {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
@@ -59,11 +54,7 @@ export default function Analytics({}: AnalyticsProps) {
       console.log("Browser:", browser);
       console.log("OS:", os);
       if (!localStorage.getItem("visitor_id")) {
-        const crypto = require("crypto");
-        localStorage.setItem(
-          "visitor_id",
-          crypto.randomBytes(20).toString("hex")
-        );
+        localStorage.setItem("visitor_id", crypto.randomUUID());
       }
     }
   }, [isClient]);

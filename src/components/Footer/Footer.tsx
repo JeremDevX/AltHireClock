@@ -3,11 +3,7 @@
 import styles from "./Footer.module.css";
 import { FaLinkedin, FaGithub, FaGlobe } from "react-icons/fa6";
 
-interface FooterProps {
-  // future props (e.g. links) can be added here
-}
-
-export default function Footer({}: FooterProps) {
+export default function Footer() {
   return (
     <footer className={styles.container}>
       <div className={styles.inner}>

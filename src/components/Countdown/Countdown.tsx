@@ -3,11 +3,7 @@
 import TimeSquare from "../TimeSquare/TimeSquare";
 import styles from "./Countdown.module.css";
 
-interface CountdownProps {
-  //Add props here
-}
-
-export default function Countdown({}: CountdownProps) {
+export default function Countdown() {
   return (
     <div className={styles.container}>
       <TimeSquare days />

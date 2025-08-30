@@ -3,9 +3,10 @@
 // typings, install or provide the official type definitions from the
 // altcha package if available.
 
-interface AltchaWidget extends HTMLElement {
-  // payload is set on the `statechange` event detail by the widget.
-}
+// Use a type alias instead of an empty interface to avoid the
+// `@typescript-eslint/no-empty-object-type` rule; extend later via
+// intersection if additional members are needed.
+type AltchaWidget = HTMLElement;
 
 declare global {
   interface HTMLElementTagNameMap {
@@ -14,7 +15,10 @@ declare global {
 
   namespace JSX {
     interface IntrinsicElements {
-      "altcha-widget": any;
+      "altcha-widget": React.DetailedHTMLProps<
+        React.HTMLAttributes<AltchaWidget>,
+        AltchaWidget
+      >;
     }
   }
 }

@@ -63,4 +63,6 @@ const Altcha = forwardRef<{ value: string | null }, AltchaProps>(
   }
 );
 
+Altcha.displayName = "Altcha";
+
 export default Altcha;

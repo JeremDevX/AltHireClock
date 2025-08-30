@@ -4,11 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./ContactButton.module.css";
 import Altcha from "./Altcha";
 
-interface ContactButtonProps {
-  // Add props here if needed
-}
-
-export default function ContactButton({}: ContactButtonProps) {
+export default function ContactButton() {
   const [toggleForm, setToggleForm] = useState(false);
   const [nameFilled, setNameFilled] = useState(false);
   const [emailFilled, setEmailFilled] = useState(false);
@@ -37,8 +33,9 @@ export default function ContactButton({}: ContactButtonProps) {
       form.reset();
       setToggleForm(false);
       alert("Message envoyé ✅");
-    } catch (err: any) {
-      alert(err?.message ?? "Erreur lors de l’envoi");
+    } catch (err) {
+      const error = err as Error;
+      alert(error?.message ?? "Erreur lors de l’envoi");
     }
   }
 

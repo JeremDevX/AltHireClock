@@ -5,8 +5,6 @@ import styles from "./ProfileModal.module.css";
 import { FaChartPie, FaSuitcase } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 
-interface ProfileModalProps {}
-
 type CardType = {
   key: string;
   icon: React.ReactNode;
@@ -14,7 +12,7 @@ type CardType = {
   content: React.ReactNode;
 };
 
-export default function ProfileModal({}: ProfileModalProps) {
+export default function ProfileModal() {
   const cards: CardType[] = [
     {
       key: "skills",
@@ -235,7 +233,6 @@ export default function ProfileModal({}: ProfileModalProps) {
             key={card.key}
             icon={card.icon}
             title={card.title}
-            content={card.content}
             onOpen={() => openModal(card)}
           />
         ))}
@@ -275,12 +272,10 @@ export default function ProfileModal({}: ProfileModalProps) {
 function Card({
   title,
   icon,
-  content,
   onOpen,
 }: {
   title: string;
   icon: React.ReactNode;
-  content: React.ReactNode;
   onOpen: () => void;
 }) {
   return (

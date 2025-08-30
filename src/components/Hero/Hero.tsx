@@ -2,11 +2,7 @@
 
 import styles from "./Hero.module.css";
 
-interface HeroProps {
-  //Add props here
-}
-
-export default function Hero({}: HeroProps) {
+export default function Hero() {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>AltHireClock</h1>

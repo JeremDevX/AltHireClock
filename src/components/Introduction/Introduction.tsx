@@ -10,11 +10,7 @@ import { BsHourglass } from "react-icons/bs";
 import { AiFillFire } from "react-icons/ai";
 import Image from "next/image";
 
-interface IntroductionProps {
-  //Add props here
-}
-
-export default function Introduction({}: IntroductionProps) {
+export default function Introduction() {
   return (
     <div className={styles.container}>
       <div className={styles.innerContainer}>
@@ -38,7 +34,7 @@ export default function Introduction({}: IntroductionProps) {
                 aria-label="Capacité d'adaptation"
               >
                 <SiFusionauth />
-                Capacité d'adaptation
+                Capacité d&apos;adaptation
               </li>
               <li
                 role="listitem"
@@ -89,7 +85,7 @@ export default function Introduction({}: IntroductionProps) {
         <div className={styles.stat}>
           <BsHourglass />
           <h3 className={styles.strong}>10 ans</h3>
-          <p className={styles.text}>D'expérience pro</p>
+          <p className={styles.text}>D&apos;expérience pro</p>
         </div>
         <div className={styles.stat}>
           <AiFillFire />
