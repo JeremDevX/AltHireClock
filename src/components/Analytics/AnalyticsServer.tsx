@@ -1,7 +1,11 @@
 import { neon } from "@neondatabase/serverless";
 import AnalyticsWidget from "./AnalyticsWidget";
+import { unstable_noStore } from "next/cache";
+
+export const dynamic = "force-dynamic";
 
 async function getData() {
+  unstable_noStore();
   const sql = neon(process.env.DATABASE_URL || "");
 
   const totalViews = await sql`SELECT total_views FROM stats WHERE id = 1`;
