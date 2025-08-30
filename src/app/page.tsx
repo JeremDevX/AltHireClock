@@ -6,6 +6,7 @@ import ContactButton from "@/components/ContactButton/ContactButton";
 import Introduction from "@/components/Introduction/Introduction";
 import ProfileModal from "@/components/ProfileModal/ProfileModal";
 import Footer from "@/components/Footer/Footer";
+import Analytics from "@/components/Analytics/Analytics";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Introduction />
       <ProfileModal />
       <Footer />
+      <Analytics />
     </main>
   );
 }
