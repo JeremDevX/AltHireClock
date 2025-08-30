@@ -5,6 +5,7 @@ import Introduction from "@/components/Introduction/Introduction";
 import ProfileModal from "@/components/ProfileModal/ProfileModal";
 import Footer from "@/components/Footer/Footer";
 import Analytics from "@/components/Analytics/Analytics";
+import AnalyticsServer from "@/components/Analytics/AnalyticsServer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <ProfileModal />
       <Footer />
       <Analytics />
+      <AnalyticsServer />
     </main>
   );
 }

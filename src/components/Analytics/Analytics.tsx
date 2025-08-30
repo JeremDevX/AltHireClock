@@ -1,9 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Analytics() {
   const [isClient, setIsClient] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     setIsClient(true);
@@ -56,6 +58,21 @@ export default function Analytics() {
       if (!localStorage.getItem("visitor_id")) {
         localStorage.setItem("visitor_id", crypto.randomUUID());
       }
+
+      fetch("/api/analytics", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          visitor_id: localStorage.getItem("visitor_id"),
+          browser,
+          os,
+        }),
+        keepalive: true,
+      }).finally(() => {
+        router.refresh();
+      });
     }
   }, [isClient]);
 

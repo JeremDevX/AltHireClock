@@ -1,0 +1,202 @@
+.fab {
+  position: fixed;
+  right: 28px;
+  top: 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--background);
+  color: #fff;
+  border-radius: 999px;
+  padding: 12px 16px;
+  box-shadow: 0 0 8px var(--red);
+  border: 1px solid rgba(255, 60, 60, 0.08);
+  cursor: pointer;
+  z-index: 60;
+  transition: transform 160ms ease, box-shadow 160ms ease;
+
+  svg {
+    color: var(--light-red);
+  }
+}
+
+.fab:hover {
+  box-shadow: 0 0 14px var(--red);
+  transform: scale(1.02);
+}
+
+.fab:active {
+  transform: scale(0.98);
+}
+.fab:focus {
+  outline: 2px solid rgba(255, 40, 40, 0.16);
+}
+
+.fabLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--foreground);
+  display: inline-block;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 80;
+  padding: 28px;
+}
+
+.modal {
+  width: min(840px, 96%);
+  max-width: 900px;
+  max-height: 86vh;
+  overflow: auto;
+  background: var(--background);
+  border-radius: 12px;
+  padding: 20px 22px;
+  color: #ededed;
+  border: 1px solid var(--red-bg);
+  box-shadow: 0 0 6px rgba(255, 0, 0, 0.312);
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.modalHeader h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+.closeButton {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #fff;
+  padding: 6px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.closeButton:hover {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--light-red);
+}
+
+.metrics {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.metric {
+  flex: 1 1 0;
+  background: linear-gradient(135deg, #0b0b0b 0%, rgb(45, 0, 0) 100%);
+  border-radius: 0.75rem;
+  padding: 0.75rem 0.875rem;
+  border: 1px solid #cf000069;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.metricLabel {
+  font-size: 0.75rem;
+  color: #cfcfcf;
+  margin-bottom: 6px;
+}
+.metricValue {
+  font-size: 1.625rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.distribution {
+  margin-top: 8px;
+}
+
+.distribution h3 {
+  margin: 16px 0 10px 0;
+  color: #fff;
+  font-size: 1.125rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 130px 42px;
+  gap: 12px;
+  align-items: center;
+}
+
+.rowLabel {
+  font-weight: 600;
+  color: #efefef;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rowCount {
+  font-weight: 500;
+  color: #cfcfcf;
+  margin-left: 6px;
+  font-size: 13px;
+}
+
+.barTrack {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.barFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--red-bg), var(--red));
+  border-radius: 999px;
+  transition: width 420ms cubic-bezier(0.2, 0.9, 0.25, 1);
+}
+
+.pct {
+  text-align: right;
+  color: #fff;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .fab {
+    right: 16px;
+    bottom: 16px;
+    padding: 10px 12px;
+  }
+  .fabLabel {
+    display: none;
+  }
+  .modal {
+    padding: 14px;
+  }
+  .metrics {
+    flex-direction: column;
+  }
+  .row {
+    grid-template-columns: 1fr 110px 44px;
+  }
+}
+
+.modal:focus {
+  outline: none;
+}
