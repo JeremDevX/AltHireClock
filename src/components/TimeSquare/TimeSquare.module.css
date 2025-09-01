@@ -33,3 +33,18 @@
 .timeLabel h3 {
   font-weight: 400;
 }
+
+@media (max-width: 425px) {
+  .timeUnit {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .timeValue {
+    font-size: 2.5rem;
+  }
+
+  .timeLabel {
+    font-size: 0.875rem;
+  }
+}

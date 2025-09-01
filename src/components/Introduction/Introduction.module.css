@@ -136,3 +136,41 @@
 .text {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .innerContainer {
+    flex-direction: column;
+  }
+
+  .avatar {
+    width: 100%;
+    height: auto;
+    max-width: 420px;
+  }
+
+  .textContainer {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  .stats {
+    gap: 0.5rem;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  .strong {
+    font-size: 1.25rem;
+  }
+
+  .text {
+    font-size: 0.875rem;
+  }
+}

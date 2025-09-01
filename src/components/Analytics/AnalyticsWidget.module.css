@@ -179,8 +179,8 @@
 
 @media (max-width: 520px) {
   .fab {
-    right: 16px;
-    bottom: 16px;
+    right: 20px;
+    top: 20px;
     padding: 10px 12px;
   }
   .fabLabel {

@@ -122,3 +122,14 @@
   background: #251919;
   cursor: not-allowed;
 }
+
+@media (max-width: 520px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .button {
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+  }
+}

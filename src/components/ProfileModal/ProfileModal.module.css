@@ -88,8 +88,8 @@
   font-size: 1.5rem;
   cursor: pointer;
   position: absolute;
-  right: 0.5rem;
-  top: 0.25rem;
+  right: 0.125rem;
+  top: 0.125rem;
 }
 
 .modal h3 {
@@ -230,4 +230,43 @@
 
 .itemBullets {
   margin: 0.25rem 0 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+
+    svg {
+      width: 2.75rem;
+      height: 2.75rem;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .card {
+    padding: 2rem;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+
+  .modal {
+    padding: 1rem;
+  }
+
+  .sectionItem {
+    padding: 0.5rem;
+  }
 }
