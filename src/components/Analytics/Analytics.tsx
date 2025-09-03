@@ -52,9 +52,6 @@ export default function Analytics() {
         ? "iOS"
         : "Unknown";
 
-      console.log("User Agent:", ua);
-      console.log("Browser:", browser);
-      console.log("OS:", os);
       if (!localStorage.getItem("visitor_id")) {
         localStorage.setItem("visitor_id", crypto.randomUUID());
       }
