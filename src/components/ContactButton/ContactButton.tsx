@@ -72,7 +72,7 @@ export default function ContactButton() {
         aria-haspopup="dialog"
         aria-expanded={toggleForm}
       >
-        Votre futur alternant dès septembre !
+        ► Votre futur alternant dès septembre ! ◄
       </button>
 
       {toggleForm && (
